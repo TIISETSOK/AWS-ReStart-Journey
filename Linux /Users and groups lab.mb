@@ -1,1 +1,5 @@
+#Users and Groups
 
+This lab shows my foundational knowledge in core Linux system administration, specifically in managing users and groups. It serves to show how comfortable i am with the process of creating accounts, assigning them to the correct groups with the right permissions, and understanding how this entire system works together to control access and maintain security on a server.
+
+![How i can create files](Linux/images/users&groups.png)
