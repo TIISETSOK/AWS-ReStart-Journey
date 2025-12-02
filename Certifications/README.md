@@ -1,1 +1,1 @@
-# The certifications i acquired during my AWS ReStart Journey
+# The certifications i acquired throughout my AWS ReStart Journey.
