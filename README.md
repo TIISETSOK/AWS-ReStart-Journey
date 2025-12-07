@@ -1,45 +1,65 @@
-# AWS re/Start GitHub README Template
+#  My AWS re/Start 
 
-# Introduction About Me
-Name:
+---
 
-Background:
+## Introduction About Me
+### Name:
 
-Career Goals:
+### Background:
 
-#AWS re/Start Journey
+### Career Goals:
 
-Why I joined the program:
+---
 
-Key lessons and experiences:
+## Why I joined the AWS ReStart program:
 
-# Skills and Technologies
+---
+
+# Key lessons and experiences:
+
+## Skills and Technologies
 AWS Services:
 EC2, S3, RDS, Lambda, VPC, IAM
 Linux
 Python
 Networking and Databases
 
-# Things Completed During the Program
+## Things Completed During the Program
 Certifications and badges earned
 
-Projects completed
+## Projects completed
 
-Labs completed
+## Labs completed
 
-AWS Core Services Explained
+Static Website 
 
-Compute: Describe what compute means in AWS, give examples like EC2 and Lambda, and explain why it matters.
+3D Architecture 
 
-Networking: Explain its purpose, examples such as VPC and Route 53, and how it connects resources.
+AWS Lex Bot (TBD)
 
-Storage: Outline types like S3 and EBS and their use cases.
+## AWS Core Services Explained
 
-Databases: Explain why databases are important and include examples like RDS and DynamoDB.
+### Compute: 
 
-Security: Discuss IAM roles, policies, and basic encryption.
+Describe what compute means in AWS, give examples like EC2 and Lambda, and explain why it matters.
 
-# Certifications and Badges
+### Networking: 
+
+Explain its purpose, examples such as VPC and Route 53, and how it connects resources.
+
+### Storage: 
+
+Outline types like S3 and EBS and their use cases.
+
+### Databases: 
+
+Explain why databases are important and include examples like RDS and DynamoDB.
+
+### Security:
+
+Discuss IAM roles, policies, and basic encryption.
+
+## Certifications and Badges
 Security Simulearn
 
 Networking Simulearn
@@ -48,7 +68,9 @@ Storage Simulearn
 
 Database Simulearn
 
-#Projects
+## Labs Completed
+
+## Projects
 
 Static Website 
 
