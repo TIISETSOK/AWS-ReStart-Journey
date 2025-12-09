@@ -1,6 +1,6 @@
 # Amazon Aurora Fundermentals
 
-This lab introduces Amazon Aurora and shows my understanding of how to use Aurora. 
+In this lab i show what i am able to do with Amazon Aurora and I showcase my understanding of how to use Aurora. 
 
 # Task 1: Create an Aurora Instance
 
