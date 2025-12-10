@@ -81,29 +81,5 @@ Ana Contractor""
 
 ## Conclusions
 
-### Subnets
-Subnets enable segmentation of resources within a virtual network, aiding in better resource management and security control.
 
-### Route Tables
-Route tables dictate the traffic flow between subnets and external networks, ensuring efficient routing and connectivity.
 
-### Internet Gateways
-Internet gateways serve as the entry and exit points for internet-bound traffic, facilitating communication between VPC resources and the internet.
-
-### Network ACLs
-Network ACLs provide an additional layer of security by filtering inbound and outbound traffic at the subnet level based on specified rules.
-
-### Security Groups
-Security groups act as virtual firewalls for instances, controlling inbound and outbound traffic based on defined rules to enhance network security and access control.
-
----
-
-## Contact Information
-
-**Cristhian Becerra**  
-Email: [cristhianbecerra99@gmail.com](mailto:cristhianbecerra99@gmail.com)  
-Phone: +51 951 634 354  
-Location: Lima, Peru
-```
-
-You can copy this text into a file with the `.md` extension and upload it to your GitHub repository.
