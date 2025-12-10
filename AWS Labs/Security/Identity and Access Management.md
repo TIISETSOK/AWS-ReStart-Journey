@@ -60,40 +60,41 @@ This will ensure strong access security measures are required from all IAM users
 
 # Task 2. Exploring IAM Users and Groups
 
-## Step 1, Review IAM Users
+In this task i reviewed pre-created users along with the pre-created user groups. I Checked the attached polices to the user groups and what the differences between the user groups and their permissions are.
+
+### **Step 1, Review IAM Users**
 I navigated to **IAM services** and clicked on **Users**, to observe:  
 - that three users existed  
 - that each user had no permissions assigned  
 - that no group memberships were active  
 - that users had console passwords configured  
 
-## Step 2 Reviewing IAM Groups  
+### **Step 2 Reviewing IAM Groups ** 
 Navigated to **IAM services** and selected **User Groups**, ensure the existance of: 
 - **EC2 Support**  
 - **S3 Support**  
 - **EC2 Admin**
 
-### Group Policy Details
-- **EC2-Support:** AWS-managed EC2 read-only policy  
-- **S3-Support:** AWS-managed S3 read-only policy  
-- **EC2-Admin:** Custom inline policy with administrative EC2 permissions  
-
 Groups allow scalable permission management for multiple users.
 
 ---
 
-# 3. Assigning Users to Groups  
+# Task 3. Assigning Users to Groups 
 
-After analyzing group permissions, users were assigned as follows:
+### **Step1, Adding using user1  to S3 support group
+I navigated to the left navigation pane, choose User groups.
 
-| User   | Group Assigned     | Purpose |
-|--------|---------------------|---------|
-| user-1 | S3-Support         | S3 read-only access |
-| user-2 | EC2-Support        | EC2 read-only access |
-| user-3 | EC2-Admin          | EC2 admin privileges |
+Choose the S3-Support group.
 
-Assignments were completed via:  
-**IAM → Users → Select User → User Groups → Add to Group**
+Choose the Users tab.
+
+In the Users tab, i chooe to Add users.
+
+In the Add users to S3-Support window, configure the following options:
+
+Select the check box for user-1.
+Choose Add Users.
+In the Users tab, you see that user-1 has been added to the group
 
 This implements the principle of least privilege effectively.
 
