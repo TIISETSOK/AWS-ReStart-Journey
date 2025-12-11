@@ -15,46 +15,10 @@ This repository documents the cloud architecture for a next-generation 3D e-comm
 
 The solution is built on AWS, leveraging a suite of services to create a secure, scalable, and high-performance foundation.
 
+<img width="2108" height="1250" alt="undefined (3)" src="https://github.com/user-attachments/assets/fbe6d24a-edde-4e5f-971b-4525912d6eb4" />
+
+
 ```mermaid
-graph TB
-    subgraph "Global User Access"
-        A[Global Users] --> B[Amazon Route 53]
-    end
-    
-    subgraph "Content Delivery & Security"
-        B --> C[Amazon CloudFront]
-        C --> D[CloudFront Edge Locations]
-        C --> E[AWS WAF]
-        E --> F[Amazon S3]
-    end
-    
-    subgraph "Compute Layer"
-        D --> G[Elastic Load Balancer]
-        G --> H[EC2 Auto Scaling Group]
-        H --> I[GPU EC2 Instances<br/>3D Rendering]
-        G --> J[AWS Lambda<br/>Serverless Functions]
-    end
-    
-    subgraph "Data Layer"
-        I --> K[Amazon RDS<br/>Structured Data]
-        J --> L[Amazon DynamoDB<br/>Fast-Changing Data]
-        I --> M[Amazon ElastiCache<br/>Session Cache]
-    end
-    
-    subgraph "Monitoring & Security"
-        N[Amazon CloudWatch] --> H
-        N --> J
-        O[AWS IAM] --> H
-        O --> J
-        P[AWS GuardDuty] --> E
-        Q[AWS Trusted Advisor] --> R[Cost Optimization]
-    end
-    
-    F --> I
-    K --> I
-    L --> I
-    M --> I
-```
 
 ## Core AWS Services & Justification
 
