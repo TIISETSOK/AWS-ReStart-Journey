@@ -1,11 +1,4 @@
-AWs
-re:Start
 
-LAB
-
-Introduction to Amazon Aurora
-
-**WEEK 7**
 
 aws re/start
 
