@@ -1,107 +1,120 @@
-# AWS Challenge Lab
+## Building and Accessing an RDS Server
 
-## Build and Access an RDS Server
+- Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud.
+- It provides cost-efficient and resizable capacity while managing time-consuming database administration tasks, which allows you to focus on your applications and business.
 
-### Overview
 
-Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while managing time-consuming database administration tasks, which allows you to focus on your applications and business.
+## What i am doing in this lab
 
----
-
-## Your Challenge
-
-1. Launch an Amazon RDS DB instance using either Amazon Aurora Provisioned DB or MySQL database engines.
-2. Connect (SSH) to the Linux Server.
-3. Install a MySQL client, and use it to connect to your DB.
-4. Create a table `RESTART` with the following columns:
+1. I launched an Amazon RDS DB instance using either Amazon Aurora Provisioned DB or MySQL database engine.
+2. I connect (SSH) to the Linux Server.
+3. I installed a MySQL client, and i used it to connect to DB.
+4.  I created a table `RESTART` with the following columns:
    - Student ID (Number)
    - Student Name
    - Restart City
    - Graduation Date (Date Time)
-5. Insert 10 sample rows into this table.
-6. Select all rows from this table.
-7. Create a table `CLOUD_PRACTITIONER` with the following columns:
+5. Inserted 10 sample rows into this table.
+6. Selected all rows from this table.
+7. Created a table `CLOUD_PRACTITIONER` with the following columns:
    - Student ID (Number)
    - Certification Date (Date Time)
-8. Insert 5 sample rows into this table.
-9. Select all rows from this table.
-10. Perform an inner join between the 2 tables created above and display Student ID, Student Name, Certification Date.
+8. Inserted 5 sample rows into this table.
+9. Selected all rows from this table.
+10. Performed an inner join between the 2 tables created above and display Student ID, Student Name, Certification Date.
 
 ---
 
-## Task 1: Create a Security Group for the RDS DB Instance
+## Task 1
 
-### Step 1: Access the VPC management console
+**I created a Security Group for the RDS DB Instance.**
 
-Open the AWS Management Console, and select VPC.
+### Step 1; Accessing the VPC management console
 
-### Step 2: Create security group
+I opened the AWS Management Console, and selected VPC.
 
-Navigate to the Security Groups section, and select Create security group.
+### Step 2; here i created security a group
 
-### Step 3: Basic details
+I navigated to the Security Groups section, and selected Create security group.
 
-In the Basic details section, configure the DB Security Group using the required settings.
+### Step 3; i configured the basic details
 
-### Step 4: Inbound rules
+In the Basic details section, I configured the DB Security Group using the required settings.
 
-In the Inbound rules section, configure the DB Security Group to permit inbound traffic on port 3306 from any EC2 instance that is associated with the Web Security Group.
+### Step 4; I set up  Inbound rules
 
----
+In the Inbound rules section,I configured the DB Security Group to permit inbound traffic on port 3306 from any EC2 instance that is associated with the Web Security Group.
 
-## Task 2: Create a DB Subnet Group
+<img width="1666" height="235" alt="Screenshot 2025-12-12 050511" src="https://github.com/user-attachments/assets/eddbb1f8-cc4e-416b-8f49-be14f8d38079" />
 
-### Step 1: Access the RDS database service
-
-In the AWS Management Console, select RDS.
-
-### Step 2: Create DB subnet group
-
-Navigate to the Subnet groups section, and select Create DB subnet group.
-
-### Step 3: Subnet group details
-
-In the Subnet group details section, configure the DB Subnet Group using the required settings.
-
-### Step 4: Add subnets
-
-In the Add subnets section, configure the required settings.
 
 ---
 
-## Task 3: Launch an Amazon RDS DB instance
+## Task 2:
 
-### Step 1: Create database
+**Create a DB Subnet Group**
 
-Navigate to the Databases section, and select Create database.
+### Step 1; I went back to Access the RDS database service
 
-### Step 2: Engine options
+In the AWS Management Console,I selected RDS.
 
-In the Engine options section, for Engine type, choose MySQL, for Engine version, choose the latest version.
+### Step 2; I created a DB subnet group
 
-### Step 3: Templates
+I navigated to the Subnet groups section, and selected Create DB subnet group.
 
-In the Templates section, choose Free tier.
+### Step 3; Updating Subnet group details
 
-### Step 4: Availability and durability
+In the Subnet group details section, I configured the DB Subnet Group using the required settings.
+
+### Step 4; Here I Added subnets
+
+In the Add subnets section,I configurd the required settings.
+
+<img width="810" height="557" alt="image" src="https://github.com/user-attachments/assets/b1309e01-6314-48a4-82ec-d2708e22857c" />
+
+---
+
+## Task 3:
+
+**Launch an Amazon RDS DB instance**
+
+### Step 1; I Created a database
+
+I navigated to the Databases section, and select Create database.
+
+### Step 2; I set the engine options
+
+In the Engine options section, for Engine type, I chose MySQL, for Engine version, and chose the latest version.
+
+### Step 3; I had to choose a Template
+
+In the Templates section,I chose Free tier.
+
+### Step 4; Availability and durability
 
 Notice that when you selected the Free tier template, the Single DB instance option was selected and locked as the default deployment option in the Availability and durability section.
 
-### Step 5: Settings
+### Step 5; Settings
 
-In the Settings section, configure the required parameters.
+In the Settings section, I configured the required parameters.
 
-### Step 6: Instance configuration
+<img width="722" height="748" alt="Screenshot 2025-12-12 052430" src="https://github.com/user-attachments/assets/a3fb55f1-91e8-4b65-b145-c732934eff3b" />
 
-In the Instance configuration section, for DB instance class, configure the required settings.
 
-### Step 7: Storage
+### Step 6; Doing Instance configuration
 
-In the Storage section, for Storage type, select General Purpose SSD (gp2).
+In the Instance configuration section, for DB instance class, configured the required settings, which was selecting the bustable classed opton.
+
+### Step 7, settin up settings for Storage
+
+In the Storage section, for Storage type, I selected General Purpose SSD (gp2).
 
 ### Step 8: Connectivity
 
-In the Connectivity section, configure the required settings.
+In the Connectivity section, I configured the required settings.
+
+<img width="749" height="753" alt="Screenshot 2025-12-12 052237" src="https://github.com/user-attachments/assets/e5b15b2f-2664-4f59-980a-f48079a89efb" />
+
 
 ### Step 9: Monitoring
 
