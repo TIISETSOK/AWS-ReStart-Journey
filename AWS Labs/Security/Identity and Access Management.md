@@ -34,20 +34,20 @@ This diagram of the current environment with the listed IAM users and IAM groups
 
 ---
 
-# Task 1. Creating a Custom Account Password Policy  
+# Task 1; Creating a Custom Account Password Policy  
 The first task is to strengthen the password requirements by creating a custom password policy. I added password options to make the passwords that the users create much more difficult to crack.
 
-### **Step 1, I Accessed IAM services**
+### **Step 1; I Accessed IAM services**
 - I logged in to the AWS Console. 
 - Opened the IAM service  
 - Reviewed the dashboard and security status  
 
-### **Step 2, Review Default Password Policy**
+### **Step 2; Review Default Password Policy**
 - I Navigated to **Account Settings**  
 - Viewed the default account password policy  
 - And then selected **Edit** to create a new custom policy  
 
-### **Step 3, I configured a New Password Policy**
+### **Step 3; I configured a New Password Policy**
 I applied a secure password policy that included:  
 - Minimum password length  
 - Required password complexity  
@@ -58,18 +58,20 @@ This will ensure strong access security measures are required from all IAM users
 
 ---
 
-# Task 2. Exploring IAM Users and Groups
+# Task 2.
+
+- **Exploring IAM Users and Groups**
 
 In this task i reviewed pre-created users along with the pre-created user groups. I Checked the attached polices to the user groups and what the differences between the user groups and their permissions are.
 
-### **Step 1, Review IAM Users**
+### **Step 1; Review IAM Users**
 I navigated to **IAM services** and clicked on **Users**, to observe:  
 - that three users existed  
 - that each user had no permissions assigned  
 - that no group memberships were active  
 - that users had console passwords configured  
 
-### **Step 2 Reviewing IAM Groups ** 
+### **Step 2; Reviewing IAM Groups ** 
 Navigated to **IAM services** and selected **User Groups**, ensure the existance of: 
 - **EC2 Support**  
 - **S3 Support**  
@@ -79,66 +81,64 @@ Groups allow scalable permission management for multiple users.
 
 ---
 
-# Task 3. Assigning Users to Groups 
+# Task 3
 
-### **Step1, Adding using user1  to S3 support group
-I navigated to the left navigation pane, choose User groups.
+- **Assigning Users to Groups** 
 
-Choose the S3-Support group.
+### Step 1; I reviewed user group memhe user groups and had  to tbers.
 
-Choose the Users tab.
+- There were no members in any of the user groups so i had to associate one user with each group.
 
-In the Users tab, i chooe to Add users.
+### Step 2; I added user1 to the S3 support group
 
-In the Add users to S3-Support window, configure the following options:
+<img width="1277" height="431" alt="Screenshot 2025-12-13 192408" src="https://github.com/user-attachments/assets/db24f89c-174a-4fe4-a63a-5afcdc9de215" />
 
-Select the check box for user-1.
-Choose Add Users.
-In the Users tab, you see that user-1 has been added to the group
-
-This implements the principle of least privilege effectively.
+### Step 3; I added user-2 to EC2- support
 
 ---
 
-# 4. Testing User Permissions  
+# Task 4.
 
-To validate that permissions were applied correctly, I logged in as each user using the IAM User Sign-In URL.
+- **Here i will be:**
 
----
+- testing User Permissions.
 
-## **4.1 Testing user-1 (S3-Support)**  
+- Validating that all permissions were applied correctly.
+
+### Step 1; Logged in as user-1
+
+- I logged in as each user using the IAM User Sign-In URL IAM users.
+<img width="819" height="784" alt="Screenshot 2025-12-13 221948" src="https://github.com/user-attachments/assets/09ad7e10-df9a-427a-a1e5-755d2ffcba66" />
+
+### Step 1; Testing user-1 (S3-Support)**  
 **Allowed:**  
 - View S3 bucket list  
 - View bucket contents and objects  
 
-**Denied:**  
-- View EC2 instances  
-
----
-
-## **4.2 Testing user-2 (EC2-Support)**  
+### **Step 2; Testing user-2 (EC2-Support)**  
 **Allowed:**  
 - View EC2 instances (read-only)  
+<img width="694" height="723" alt="Screenshot 2025-12-13 221831" src="https://github.com/user-attachments/assets/34ef51b4-2c41-4bdb-8c89-6c7516ad9cb0" />
 
 **Denied:**  
-- Stopping EC2 instances  
+- Stopping EC2 instances
+
+<img width="1304" height="258" alt="Screenshot 2025-12-13 222207" src="https://github.com/user-attachments/assets/84f6b5f1-4236-49eb-80ca-af8ed036b3bb" />
+
+
 - Accessing S3 buckets  
 
 Permission errors confirmed that read-only restrictions were in place.
 
 ---
 
-## **4.3 Testing user-3 (EC2-Admin)**  
+### **Step 3 Testing user-3 (EC2-Admin)**  
 **Allowed:**  
 - View EC2 instances  
 - Stop EC2 instances (admin permissions)  
 
 ---
 
-# 🧾 Conclusions  
-
-* **Least Privilege:** Verified that users could only perform actions explicitly allowed by their group policies.
-* **Scalability:** Demonstrated that managing permissions via Groups is significantly more efficient than managing individual users.
-* **Security Posture:** Understood the importance of strong account-wide password policies.
-* **Managed vs. Inline Policies:** Gained experience with AWS Managed policies for general use cases and custom Inline policies for specific admin rights.
+# Conclusions  
+AWS Identity and Access Management (IAM) helps securely manage who can access AWS resources and what actions they can perform. It uses users, groups, roles, and policies to organize permissions and control access efficiently across services.
 
