@@ -1,8 +1,5 @@
-# AWS Lab: Troubleshooting a Network Issue
+# Troubleshooting a Network Issue
 
-## Overview
-
-### Customer Scenario
 Your role is a cloud support engineer at Amazon Web Services (AWS). During your shift, a consulting company has a networking issue within their AWS infrastructure. The following is the email and an attachment of their architecture.
 
 ### Ticket from Your Customer
@@ -14,72 +11,103 @@ When I create an Apache server through the command line, I cannot ping it. I als
 Thanks!  
 Ana Contractor""
 
+<img width="954" height="754" alt="Screenshot 2025-12-13 022446" src="https://github.com/user-attachments/assets/35e84c7b-010b-4b72-b478-4feed878ccfc" />
+
 
 ---
 
-## Task 1: Use SSH to Connect to an Amazon Linux EC2 Instance
+## Task 1: 
 
-### Initial Preparations
-- In the AWS Management Console, select the EC2 instance and make note of the Public IPv4 address.
-- Download the private key file `labsuser.pem`. Change to the Downloads directory and modify the permissions on the key to be read-only (`r`).
+- I used an SSH to connect to an Amazon Linux EC2 instance.
+  
+### **Step 1, I collected the necessary credentials**
 
-### Connect to the Instance Using SSH
-- Establish a connection to the EC2 instance using the `ssh` command, the key, and the instance’s public IPv4 address.
+- I opened the Details drop‑down and clicked Show.
 
----
+- I downloaded the labsuser.ppk file and noted the PublicIP address.
 
-## Task 2: Install httpd
+### **Step 2; I connected with PuTTY**
 
-### Step 1: Start the Apache HTTP Server
-- Start the httpd service with the command: 
-  ```
-  sudo systemctl start httpd
-  ```
+- I installed PuTTY 
 
-### Step 2: Check the httpd Service
-- The httpd service may be running, but if you attempt to visit `http://34.219.182.160` in a browser, the page will not load.
+I opened putty.exe and configured the session using the .ppk file and PublicIP address (meeting  the PuTTY connection requirements).
+
+<img width="819" height="388" alt="Screenshot 2025-12-13 025135" src="https://github.com/user-attachments/assets/5ab1b1bb-8b52-4cb4-bd0b-cc9be59e4ecd" />
+
 
 ---
 
-## Task 3: Investigate the Customer's VPC Configuration
+## Task 2
 
-### Step 1: Access the AWS Management Console
-- Open the AWS Management Console and select **VPC**.
+- I installed httpd
 
-### Step 2: Use the VPC Left Navigation Pane
-- Use the left navigation pane and check each service within the VPC to confirm that each resource is configured correctly.
+### **Step 1; I starteed the Apache HTTP Server**
 
-### Step 3: Investigate the Instance
-- The Command Host instance is running in the Public Subnet 1 and is linked to the security group **Linux instance SG**.
+- Start the httpd service with the **systemctl start** command
+  
+### Step 2; I checked the httpd Service
 
-### Step 4: Investigate the VPC
-- The Lab VPC is available and associated with a network ACL.
+- The httpd service wasrunning, but i coild not visit `http://34.219.182.160` in a browser, as the page will not load.
 
-### Step 5: Investigate the Subnet
-- Public Subnet 1 is available in the Lab VPC and is associated with a network ACL and the Public Route Table.
+---
+
+## Task 3:
+
+- **I had to investigate the Customer's VPC Configuration**
+
+### Step 1; I accessed the AWS Management Console
+
+- i opened the AWS Management Console and selected **VPC**.
+
+### Step 2; I used the VPCs Left Navigation Pane.
+
+- I used the left navigation pane and checked each service within the VPC to confirm that each of the resources are configured correctly.
+
+### Step 3; I had to investigate the Instance.
+
+- The Command Host instance was running in the Public Subnet 1 and is linked to the security group **Linux instance SG**.
+
+### Step 4; I investigated the VPC
+
+- The Lab VPC was available and associated with a network ACL.
+
+### Step 5; Investigated the Subnet
+
+- The public Subnet 1 was available in the Lab VPC and is associated with a network ACL and the Public Route Table.
 
 ### Step 6: Investigate the Route Table
-- The Public Route Table is correctly linked to the Lab VPC. There is a route directing all internet traffic to the internet gateway. The route table is explicitly associated with Public Subnet 1.
 
-### Step 7: Investigate the Internet Gateway
-- The internet gateway is properly attached to the Lab VPC.
+- The Public Route Table has been correctly linked to the Lab VPC.
+- There is a route directing all internet traffic to the internet gateway.
+- The route table is explicitly associated with Public Subnet 1.
 
-### Step 8: Investigate the Network ACL
-- The network ACL is correctly associated with Public Subnet 1. The current rules allow all inbound and outbound traffic.
+### Step 7; I investigated the Internet Gateway
 
-### Step 9: Investigate the Security Group
-- The Linux instance SG security group is linked to the Command Host instance. The current inbound rules allow only SSH traffic. The outbound rules allow all traffic.
-- Add new inbound rules to allow ICMP, HTTP, and HTTPS traffic.
+- The internet gateway has been properly attached to the Lab VPC.
 
-### Step 10: Test ICMP Traffic
-- Ping the Apache HTTP server to verify its reachability.
+### Step 8; I investigated the Network ACL
 
-### Step 11: Test HTTP Traffic
-- Open a new tab in a browser and visit `http://34.219.182.160` to confirm that the Apache HTTP server is working.
+- The network ACL was correctly associated with Public Subnet 1.
+- The current rules allow all inbound and outbound traffic.
+
+### Step 9; I investigated the Security Group
+
+- The Linux instance SG security group was linked to the Command Host instance.
+- The inbound rules allow only SSH traffic.
+- The outbound rules allow all traffic.
+- I added new inbound rules to allow ICMP, HTTP, and HTTPS traffic.
+
+### Step 10; I tested ICMP Traffic
+
+- I had to ping the Apache HTTP server to verify its reachability.
+
+### Step 11; I tested the  HTTP Traffic
+
+- I opened a new tab in a browser to visit  **`http://34.219.182.160`** so that I can confirm that the Apache HTTP server is working.
 
 ---
 
 ## Conclusions
 
-
+Subnets divide a virtual network into smaller sections to improve organization and security. Route tables control how traffic moves between subnets and external networks. Internet gateways allow resources in the network to send and receive data from the internet. Network ACLs add security by filtering traffic at the subnet level based on rules. Security groups act like firewalls, managing access to individual instances by controlling inbound and outbound traffic.
 
