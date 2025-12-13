@@ -166,7 +166,7 @@ USE world;
 
 ## Step 2, I ceated a new table
 
-To create a new table in the world database, run the following command.
+To create a new table in the world database, i had to run the following command.
 
 
 CREATE TABLE `country` (
