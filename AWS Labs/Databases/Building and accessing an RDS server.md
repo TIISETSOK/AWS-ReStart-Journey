@@ -45,7 +45,9 @@ In the Basic details section, I configured the DB Security Group using the requi
 
 In the Inbound rules section,I configured the DB Security Group to permit inbound traffic on port 3306 from any EC2 instance that is associated with the Web Security Group.
 
-<img width="1666" height="235" alt="Screenshot 2025-12-12 050511" src="https://github.com/user-attachments/assets/eddbb1f8-cc4e-416b-8f49-be14f8d38079" />
+<img width="956" height="1020" alt="Screenshot 2025-12-13 143254" src="https://github.com/user-attachments/assets/b816468f-d4dd-47d3-94fc-88764354157b" />
+
+<img width="657" height="395" alt="Screenshot 2025-12-13 143700" src="https://github.com/user-attachments/assets/c257a6dc-91e7-45d5-9e22-3f368698b7d6" />
 
 
 ---
@@ -71,6 +73,9 @@ In the Subnet group details section, I configured the DB Subnet Group using the 
 In the Add subnets section,I configurd the required settings.
 
 <img width="810" height="557" alt="image" src="https://github.com/user-attachments/assets/b1309e01-6314-48a4-82ec-d2708e22857c" />
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/c4c81d34-40eb-40e7-88ec-c7faf7ddf37f" />
+
 
 ---
 
@@ -105,109 +110,127 @@ In the Settings section, I configured the required parameters.
 
 In the Instance configuration section, for DB instance class, configured the required settings, which was selecting the bustable classed opton.
 
-### Step 7, settin up settings for Storage
+### Step 7, setting up settings for Storage
 
 In the Storage section, for Storage type, I selected General Purpose SSD (gp2).
 
-### Step 8: Connectivity
+### Step 8; Setting up connectivity
 
 In the Connectivity section, I configured the required settings.
 
 <img width="749" height="753" alt="Screenshot 2025-12-12 052237" src="https://github.com/user-attachments/assets/e5b15b2f-2664-4f59-980a-f48079a89efb" />
 
 
-### Step 9: Monitoring
+### Step 9; Monitoring 
 
-In the Monitoring section, for Additional configuration, uncheck Enable Enhanced Monitoring.
+In the Monitoring section, i expaned Additional configuration, unchecked Enable Enhanced Monitoring.
 
-### Step 10: Review database creation
+### Step 10; Reviewing the databases creation.
 
-Verify the availability of the `challenge-lab-db` database and take note of its endpoint in the Connectivity & Security section.
+I varified if the `database-challenge-lab-db` database was created sussessfully  and i also took note of its endpoint in the Connectivity & Security section.
+
+<img width="1198" height="1020" alt="Screenshot 2025-12-13 150114" src="https://github.com/user-attachments/assets/c1cad181-44ff-48bb-b7d8-4fd387c36059" />
+
 
 ---
 
-## Task 4: Use SSH to connect to the Linux Server
+## Task 4: i used SSH to connect to the Linux Server
 
 ### Initial Preparations
 
-In the AWS Management Console, select the Linux Server EC2 instance and make note of the Public IPv4 address.
+Step 1; i collected all my necessary credentials
 
-Download the private key file `labsuser.pem`. Change to the Downloads directory and modify the permissions on the key to be read-only (`r`).
+- I opened the Details drop‑down menu and clicked Show.
 
-### Connect to the Linux Server using SSH
+- Downloaded the labsuser.ppk file and noted the PublicIP address.
 
-Establish a connection to the Linux Server EC2 instance using the `ssh` command, the key, and the instance’s public IPv4 address.
+- I closed the Details panel.
 
----
+Step 2; I connected via the use of PuTTY
 
-## Task 5: Configure the EC2 instance to connect to the DB
+- I installed PuTTY if you don’t already have it.
 
-### Step 1: Install the DB client
-
-Run the command `sudo yum install mariadb –y` to install the MariaDB client.
-
-### Step 2: Connect to the database
-
-After installing a MySQL client, run the following command to connect to the database.
+- I opened  putty.exe and configured the session using the .ppk file and PublicIP address (following the PuTTY connection guide).
 
 ---
 
-## Task 6: Interact With Your DB
+## Task 5: 
 
-### Step 1: Create a database
+- **Configure the EC2 instance to connect to the DB**
 
-CREATE the `challenge_lab` database and switch to it.
+### Step 1; I installed the DB client
 
-### Step 2: Create the RESTART table
+- Ran the command `sudo yum install mariadb –y` to install the MariaDB client.
 
-CREATE a table `RESTART` with the following columns:
+### Step 2; I connected to the database
+
+After installing a MySQL client, i ran the following command to connect to the database.
+
+---
+
+## Task 6: 
+
+- **Interact With Your DB**
+
+### Step 1; I Created a database
+
+CREATED the `database-challenge_lab` database and switch to it.
+
+### Step 2; I Created the RESTART table
+
+CREATED a table `RESTART` with the following columns:
 - Student ID (Number)
 - Student Name
 - Restart City
 - Graduation Date (Date Time)
 
-### Step 3: Insert sample rows
+<img width="1334" height="374" alt="image" src="https://github.com/user-attachments/assets/fa60b04a-2d3f-41f4-8e93-540f92a7cade" />
 
-INSERT 10 sample rows into the `RESTART` table.
+
+### Step 3; I Insert sample rows
+
+INSERTED 10 sample rows into the `RESTART` table.
 
 ### Step 4: Select all rows
 
-SELECT all rows from the `RESTART` table.
+I SELECTED all rows from the `RESTART` table.
 
----
+<img width="826" height="439" alt="image" src="https://github.com/user-attachments/assets/63c396e3-37fb-4115-8d20-365f02794db5" />
 
-### Step 5: Create the CLOUD_PRACTITIONER table
 
-CREATE a table `CLOUD_PRACTITIONER` with the following columns:
+### Step 5; I created the CLOUD_PRACTITIONER table
+
+CREATED a table `CLOUD_PRACTITIONER` with the following columns:
 - Student ID (Number)
 - Certification Date (Date Time)
 
-### Step 6: Insert sample rows
+ <img width="1508" height="358" alt="Screenshot 2025-12-13 151048" src="https://github.com/user-attachments/assets/843cfd11-91f2-437e-87ae-b33997697852" />
+ 
+
+### Step 6; I had to insert sample rows
 
 INSERT 5 sample rows into the `CLOUD_PRACTITIONER` table.
 
-### Step 7: Select all rows
+### Step 7; I selected all rows
 
-SELECT all rows from the `CLOUD_PRACTITIONER` table.
+SELECTED all rows from the `CLOUD_PRACTITIONER` table.
 
-### Step 8: Perform an inner join
+<img width="1324" height="619" alt="Screenshot 2025-12-13 150844" src="https://github.com/user-attachments/assets/23974921-f695-4815-b5f0-9b9d93fb2447" />
+
+
+### Step 8; I performed an inner join
 
 Perform an INNER JOIN between the 2 tables created above and display:
 - Student ID
 - Student Name
 - Certification Date
+<img width="1419" height="520" alt="Screenshot 2025-12-13 150624" src="https://github.com/user-attachments/assets/82ce342f-1d6c-4aa0-8580-d95aff260f45" />
 
 ---
 
 ## Conclusions
 
-- **Amazon Relational Databases:** Amazon Relational Databases offer scalable and reliable solutions for managing structured data, catering to diverse business needs.
-- **Amazon RDS DB Instances:** Amazon RDS DB Instances provide flexible configurations and high availability options, ensuring continuous access to databases.
-- **Permitting connections to a DB instance:** Permitting connections to a DB instance allows seamless communication between applications and databases, facilitating real-time data interactions.
-- **DB Subnet Groups:** DB Subnet Groups enable secure networking configurations, ensuring data privacy and compliance with regulatory requirements.
-- **Interacting with a Database:** Interacting with a database through applications or query tools enables data retrieval, updates, and analysis, empowering informed decision-making and efficient data management.
-
-
-```
-
-You can copy this text into a file with the `.md` extension and upload it to your GitHub repository.
+- Amazon Relational Databases help businesses manage structured data reliably and at scale. 
+- Amazon RDS DB Instances offer flexible setups and high availability to keep databases running smoothly.
+- Allowing connections to a DB instance lets applications interact with the database in real time.
+-  DB Subnet Groups provide secure network settings to protect data and meet compliance standards. Using query tools or applications to interact with databases enables efficient data access, updates, and analysis
