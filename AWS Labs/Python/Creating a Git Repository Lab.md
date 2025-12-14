@@ -51,6 +51,9 @@
 
 ### Step 2: Reviewed the GitHub Account
 
+<img width="1310" height="905" alt="Screenshot 2025-12-14 233951" src="https://github.com/user-attachments/assets/692de18e-02ae-4c53-bf55-9cea64676c51" />
+
+
 * i logged in to the new GitHub account and reviewed the personal dashboard and profile.
 
 ---
@@ -110,6 +113,8 @@
 ### Step 2: Reviewed the Downloaded Files
 
 * I extracted the downloaded `.zip` file to verify that all the files, including the Python lab solutions and the `README.md`, was successfully downloaded from GitHub.
+* 
+<img width="820" height="435" alt="Screenshot 2025-12-14 233600" src="https://github.com/user-attachments/assets/208d48c1-622f-4147-be21-ebdfd534905d" />
 
 ---
 
