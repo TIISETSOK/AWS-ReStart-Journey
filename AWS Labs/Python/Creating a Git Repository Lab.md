@@ -1,118 +1,122 @@
-
-# AWS Lab: Configure an IAM Role for EC2 Instances
+# Creating a Git Repository
 
 ## Overview
 
-In this lab, you will learn how to configure an IAM role for EC2 instances that allows them to access an S3 bucket. This is essential for granting permissions without hardcoding credentials into applications or instances.
+* **Git** and **GitHub** complement each other in modern development workflows.
+* Creating a Git repository is the initial step in establishing version control for project files.
+* A Git repository allows developers to organize code, documents, and assets centrally.
+* This setup facilitates collaboration, tracks changes, and maintains a history of modifications.
+* Git provides local version control capabilities.
+* **GitHub**, a cloud-based platform, enhances collaboration with features like pull requests, issue tracking, and project management tools.
+* GitHub runs an instance of git, which is version-control software that runs in the cloud.
+* GitHub is popular among open source projects and businesses.
+
+## Topics I will covere in this Lab:
+
+* Download solutions for previous labs.
+* Create a GitHub account.
+* Read the GitHub Hello World guide.
+* Create a private repository for your labs.
+* Download your repository.
 
 ---
 
-## Customer Scenario
+## Task 1: 
 
-You are working on a project that requires your EC2 instances to read and write files to an S3 bucket. For security and best practices, instead of embedding AWS credentials in your application, you will use IAM roles to provide temporary security credentials.
+**Here i will be downloading Python Files from Previous Labs**
 
----
+### Step 1: Accessing the AWS Cloud9 IDE
 
-## Task 1: Create an S3 Bucket
+* I opened the AWS Management Console, and selected the **Cloud9** service.
 
-### Step 1: Access the AWS Management Console
+### Step 2: I opened the AWS Cloud9 Environment
 
-1. Open the AWS Management Console and log in to your account.
-2. Navigate to the S3 service.
+* In the **Environments** section,I selected the `reStart-python-cloud9` card, and chose **Open in Cloud9**.
 
-### Step 2: Create a New Bucket
+### Step 3: Downloading the Project
 
-1. Click on **Create bucket**.
-2. In the **Bucket name** field, enter a unique name (e.g., `my-app-bucket`).
-3. Select the appropriate AWS Region.
-4. Leave the rest of the options as default and click **Create bucket**.
-
-### Step 3: Verify Bucket Creation
-
-- After the bucket is created, ensure it appears in your S3 bucket list.
+* From the Cloud9 menu bar, I chose **File > Download Project**.
+* This downloaded a compressed file containing the lab solutions onto my Pc.
+* I extracted the contents of this file for later uploading.
 
 ---
 
-## Task 2: Create an IAM Role
+## Task 2: 
 
-### Step 1: Access IAM Management
+**Creating a GitHub Account**
 
-1. In the AWS Management Console, navigate to the **IAM** service.
+### Step 1: I signed up for a GitHub account.
 
-### Step 2: Create a Role
+* Visited `www.github.com` and follow the prompts to create a new GitHub account.
 
-1. Click on **Roles** in the left navigation panel.
-2. Click on **Create role**.
+### Step 2: Reviewed the GitHub Account
 
-### Step 3: Select Trusted Entity
-
-1. Select **AWS service**.
-2. Choose **EC2** as the use case and click **Next: Permissions**.
-
-### Step 4: Attach Permissions Policy
-
-1. In the permissions policy page, search for `AmazonS3FullAccess` or create a custom policy that grants the necessary S3 permissions.
-2. Select the policy and click **Next: Tags**.
-3. Optionally, add tags and click **Next: Review**.
-
-### Step 5: Review and Create the Role
-
-1. Enter a name for the role (e.g., `EC2S3AccessRole`).
-2. Review the details and click on **Create role**.
+* i logged in to the new GitHub account and reviewed the personal dashboard and profile.
 
 ---
 
-## Task 3: Launch an EC2 Instance with the IAM Role
+## Task 3: 
 
-### Step 1: Launch an EC2 Instance
+**Reading the GitHub Hello World Guide**
 
-1. Navigate to the **EC2** service in the AWS Management Console.
-2. Click on **Launch Instance**.
+### Step 1: Accessing the Hello World Guide
 
-### Step 2: Choose Instance Type
+* After logging in, I accessed the **Hello World** guide provided by GitHub to familiarize myself with the basic repository workflow.
 
-1. Select an Amazon Machine Image (AMI) (e.g., Amazon Linux).
-2. Choose an instance type (e.g., t2.micro) and click on **Next: Configure Instance Details**.
+### Step 2: I read the GitHub Hello World Guide
 
-### Step 3: Configure the Instance
-
-1. In the **IAM role** dropdown, select the IAM role you created earlier (e.g., `EC2S3AccessRole`).
-2. Configure additional parameters as needed and click **Next: Add Storage**.
-
-### Step 4: Review and Launch
-
-1. Review your instance settings and click **Launch**.
-2. Select an existing key pair or create a new one, then click on **Launch Instances**.
+* I followed the **Hello World** exercise to understand core concepts like creating a repository, making commits, and initiating pull requests.
 
 ---
 
-## Task 4: Test S3 Access from EC2 Instance
+## Task 4:
 
-### Step 1: Connect to the EC2 Instance
+**Creating a Private Repository**
 
-1. Once the instance is running, connect to it using SSH.
-   ```bash
-   ssh -i "your-key.pem" ec2-user@your-instance-public-ip
-   ```
+### Step 1: Create a New Repository
 
-### Step 2: Install AWS CLI (if not installed)
+* From the GitHub Dashboard, I selected the **New** button to begin the repository creation process.
 
-If the AWS CLI is not installed, run the following commands:
-```bash
-sudo yum install -y aws-cli
-```
+### Step 2: I configured Repository Settings.
 
-### Step 3: Test S3 Access
+* I had to set up a private repository using the following configuration:
+    * **Repository name**: e.g., `aws_restart` (or another desired name).
+    * **Visibility**: I chose **Private** to ensure your work is not publicly accessible.
+    * **Initialize**: I checked the box for **Add a README file**.
+    
 
-Run the following command to list the contents of your S3 bucket:
-```bash
-aws s3 ls s3://my-app-bucket
-```
+### Step 3: Reviewed the Private Repository
+
+* Navigate to the newly created private repository (`aws_restart`). Confirm that the `README.md` file is present.
+
+### Step 4: Uploaded my Files
+
+* to upload mt files i chose the **Add file ▾ > Upload files** button.
+* Uploaded all the Python lab files that you extracted in Task 1.
+* Committed the changes to finalize the upload.
+
+---
+
+## Task 5: 
+
+**Downloading a Repository**
+
+### Step 1: Downloaded the ZIP file
+
+* On the main page of your `aws_restart` repository, I chose the **< > Code ▾ > Download ZIP** button.
+    
+* This saves the repository contents as a `.zip` file to my PC.
+
+### Step 2: Reviewed the Downloaded Files
+
+* I extracted the downloaded `.zip` file to verify that all the files, including the Python lab solutions and the `README.md`, was successfully downloaded from GitHub.
 
 ---
 
 ## Conclusions
 
-- **IAM Roles:** IAM Roles allow for managed security credentials that are automatically rotated, improving security and reducing the risk of credential leaks.
-- **S3 Buckets:** S3 provides scalable object storage and is often used for backup, archiving, and analysis of large data sets.
-- **Best Practices:** Using roles reduces the need for hardcoded credentials, making applications more secure and easier to manage.
+- GitHub is a platform for hosting code, managing versions, and collaborating on projects.
+- Anyone can create a free GitHub account to access tools and contribute to open-source repositories.
+- Repositories act as central storage spaces for code, documentation, and project files.
+- Private repositories add extra security and privacy by restricting access to sensitive projects.
+- You can also download a repository as a ZIP file to work with it offline.
