@@ -50,9 +50,15 @@ We will build a static website with a **serverless backend**. This architecture 
 ### Architecture Flow
 
 1.  The static website (HTML/CSS/JS) is hosted on S3 and delivered globally via **CloudFront** CDN.
-2.  When customers make bookings or orders, **API Gateway** triggers **Lambda** functions.
-3.  The Lambda functions store data in **DynamoDB** and send confirmations via **SES**.
-4.  This setup is highly scalable, pay-per-use, and requires no server management.
+   <img width="1241" height="538" alt="Screenshot 2025-12-15 051137" src="https://github.com/user-attachments/assets/bf7739ff-8edb-4cad-b549-4cd11655dec2" />
+
+3.  When customers make bookings or orders, **API Gateway** triggers **Lambda** functions.
+<img width="1236" height="551" alt="Screenshot 2025-12-15 051214" src="https://github.com/user-attachments/assets/446f298b-982b-443d-b44b-256221738195" />
+
+   
+5.  The Lambda functions store data in **DynamoDB** and send confirmations via **SES**.
+6. 
+7.  This setup is highly scalable, pay-per-use, and requires no server management.
 
 ---
 
