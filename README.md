@@ -47,7 +47,7 @@ I am a self-motivated and analytical individual with a strong passion for Cloud 
 ##  Professional Experience
 
 ### **CloudSec Bootcamp AWS Cloud Project** | *May 2025 - Aug 2025*
-**Cloud Engineering Intern**
+**Cloud Security Engineering Intern in training**
 
 **Key Responsibilities & Achievements:**
 -  Launched and managed AWS EC2 instances with both Linux and Windows operating systems
@@ -63,12 +63,17 @@ I am a self-motivated and analytical individual with a strong passion for Cloud 
 
 ##  Education & Certifications
 
+### **Praesignis**| 2025
+**AWS ReStart**(currently ongoing)
+**Relevant Modules:**
+
 ### **Regenesys School of Technology** | *2024*
 **Bachelor of Science in Computer Science** *(Studies interrupted)*
+**Relevant Modules**
 
 ### **Curro Academy Soshanguve** | *2022*
 **National Senior Certificate (NSC)** - Bachelor's Pass  
-**Subjects:** Computer Applications Technology, Mathematics, Physical Sciences
+**Relevant Subjects:** Computer Applications Technology, 
 
 ### **Certifications in Progress**
 - **AWS Certified Cloud Practitioner** *(Currently studying)*
