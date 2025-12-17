@@ -66,14 +66,20 @@ I am a self-motivated and analytical individual with a strong passion for Cloud 
 ### **Praesignis**| 2025
 **AWS ReStart**(currently ongoing)
 **Relevant Modules:**
+-**Practical:** AWS Database Migration Service,Linux,Monitoring and Security,Managing Resource consumption.
+-**Theoretical:**  AWS Security services, AWS Networking and Content Delivery services, AWS Storage Services
 
 ### **Regenesys School of Technology** | *2024*
 **Bachelor of Science in Computer Science** *(Studies interrupted)*
 **Relevant Modules**
+- Essentials of computer security.
+- Database management systems.
+- Networking and data communications.
+- Computer Organisation and architecture.
 
 ### **Curro Academy Soshanguve** | *2022*
 **National Senior Certificate (NSC)** - Bachelor's Pass  
-**Relevant Subjects:** Computer Applications Technology, 
+**Relevant Subjects:** Computer Applications Technology.
 
 ### **Certifications in Progress**
 - **AWS Certified Cloud Practitioner** *(Currently studying)*
