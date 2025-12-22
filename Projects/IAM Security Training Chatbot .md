@@ -1,5 +1,10 @@
 # Architecture Design Document: IAM Security Training Chatbot
 
+<img width="916" height="395" alt="image" src="https://github.com/user-attachments/assets/7f1153ef-b1dc-40bf-aef4-5a4b3076aab0" />
+
+
+
+
 **Prepared by:** Group 6 - AWS re/Start Program  
 **Project 3:** Cloud Learners Inc. Interactive IAM Quiz Bot  
 **Date:** December 18, 2025
